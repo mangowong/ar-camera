@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+    <!-- Top Bar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/semi_transparent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="@string/app_name"
+        app:titleTextColor="@color/white"
+        app:navigationIcon="?attr/homeAsUpIndicator"
+        app:menu="@menu/menu_main" />
+
+    <!-- Help Button (Top Right) -->
+    com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_help"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="16dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="Help"
+        android:src="@android:drawable/ic_menu_help"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/toolbar" />
+
+    <!-- Bottom Controls Container -->
+    <LinearLayout
+        android:id="@+id/bottom_controls"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Filter Button -->
+        com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_filters"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginEnd="24dp"
+            android:background="@drawable/circle_button_background"
+            android:contentDescription="Filters"
+            android:src="@android:drawable/ic_menu_gallery"
+            app:iconTint="@color/white"
+            app:iconSize="32dp"
+            app:iconGravity="textStart"
+            android:text="滤镜"
+            android:textColor="@color/white" />
+
+        <!-- Capture Button (Main) -->
+        com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_capture"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@drawable/capture_button_background"
+            android:contentDescription="Capture Photo"
+            android:elevation="8dp"
+            app:icon="@android:drawable/ic_menu_camera"
+            app:iconSize="40dp"
+            app:iconGravity="textStart"
+            app:iconTint="@color/white" />
+
+        <!-- Stickers Button -->
+        com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_stickers"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginStart="24dp"
+            android:background="@drawable/circle_button_background"
+            android:contentDescription="Stickers"
+            android:src="@android:drawable/ic_menu_add"
+            app:iconTint="@color/white"
+            app:iconSize="32dp"
+            app:iconGravity="textStart"
+            android:text="贴纸"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+    <!-- Status Text -->
+    <TextView
+        android:id="@+id/tv_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="正在扫描平面..."
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:background="@color/semi_transparent"
+        android:padding="8dp"
+        app:layout_constraintBottom_toTopOf="@id/bottom_controls"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
