@@ -5,6 +5,8 @@ import android.content.Context
 import android.graphics.Bitmap
 import android.os.Build
 import android.os.Environment
+import android.os.Handler
+import android.os.Looper
 import android.provider.MediaStore
 import android.view.PixelCopy
 import androidx.fragment.app.Fragment
@@ -18,6 +20,7 @@ class PhotoCaptureManager(
     private val fragment: Fragment,
     private val sceneView: SceneView
 ) {
+    private val mainHandler = Handler(Looper.getMainLooper())
 
     /**
      * Capture the current AR scene as a photo
@@ -44,7 +47,7 @@ class PhotoCaptureManager(
             } else {
                 continuation.resume(false)
             }
-        }, fragment.requireContext().mainHandler)
+        }, mainHandler)
     }
 
     /**
@@ -67,7 +70,7 @@ class PhotoCaptureManager(
             } else {
                 onComplete(false)
             }
-        }, fragment.requireContext().mainHandler)
+        }, mainHandler)
     }
 
     /**

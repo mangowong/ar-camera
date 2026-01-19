@@ -85,11 +85,11 @@ class ArFragment : ArFragment() {
             getString(R.string.plane_detected),
             Toast.LENGTH_LONG
         ).show()
-    }
 
-    override fun onPlaneTap(hitResult: HitResult, plane: Plane, motionEvent: android.view.MotionEvent) {
-        // Handle plane tap - place character
-        arManager.placeCharacter(hitResult)
+        // Set tap listener to place objects
+        setOnTapArPlaneListener { hitResult, plane, motionEvent ->
+            arManager.placeCharacter(hitResult)
+        }
     }
 
     private fun capturePhoto() {
@@ -117,9 +117,9 @@ class ArFragment : ArFragment() {
     }
 
     private fun showStickerSelector() {
-        stickerManager.showStickerSelector(childFragmentManager) { sticker ->
+        stickerManager.showStickerSelector(childFragmentManager) { stickerUri ->
             // Add sticker to AR scene
-            arManager.addSticker(sticker.modelUri)
+            arManager.addSticker(stickerUri)
         }
     }
 
