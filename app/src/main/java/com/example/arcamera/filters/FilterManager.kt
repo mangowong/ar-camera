@@ -57,8 +57,6 @@ class FilterManager(private val context: Context, private val sceneView: SceneVi
             FilterType.VINTAGE -> createVintageFilter()
         }
 
-        sceneView.renderableReleaseInstaInstanceDispose = true
-
         // Apply color filter to scene view
         // Note: Sceneform doesn't directly support color filters on the entire view
         // You may need to apply filters to individual renderables or use post-processing

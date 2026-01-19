@@ -19,8 +19,8 @@
         app:menu="@menu/menu_main" />
 
     <!-- Help Button (Top Right) -->
-    com.google.android.material.button.MaterialButton
-        android:id="@+id/btn_help"
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnHelp"
         android:layout_width="48dp"
         android:layout_height="48dp"
         android:layout_marginEnd="16dp"
@@ -44,8 +44,8 @@
         app:layout_constraintEnd_toEndOf="parent">
 
         <!-- Filter Button -->
-        com.google.android.material.button.MaterialButton
-            android:id="@+id/btn_filters"
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnFilters"
             android:layout_width="64dp"
             android:layout_height="64dp"
             android:layout_marginEnd="24dp"
@@ -59,8 +59,8 @@
             android:textColor="@color/white" />
 
         <!-- Capture Button (Main) -->
-        com.google.android.material.button.MaterialButton
-            android:id="@+id/btn_capture"
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnCapture"
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:background="@drawable/capture_button_background"
@@ -72,8 +72,8 @@
             app:iconTint="@color/white" />
 
         <!-- Stickers Button -->
-        com.google.android.material.button.MaterialButton
-            android:id="@+id/btn_stickers"
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnStickers"
             android:layout_width="64dp"
             android:layout_height="64dp"
             android:layout_marginStart="24dp"

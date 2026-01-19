@@ -1,18 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">AR 相机</string>
-    <string name="camera_permission_required">需要相机权限才能使用AR功能</string>
-    <string name="ar_not_supported">您的设备不支持ARCore</string>
-    <string name="ar_install_failed">ARCore安装失败</string>
-    <string name="photo_saved">照片已保存到相册</string>
-    <string name="photo_save_failed">照片保存失败</string>
-    <string name="loading_model">正在加载3D模型…</string>
-    <string name="plane_detected">检测到平面，点击屏幕放置角色</string>
-    <string name="filter_none">原图</string>
-    <string name="filter_warm">暖色</string>
-    <string name="filter_cool">冷色</string>
-    <string name="filter_bw">黑白</string>
-    <string name="filter_vintage">复古</string>
-    <string name="sticker_title">贴纸和道具</string>
-    <string name="help_title">使用帮助</string>
-    <string name="help_text">1. 移动手机扫描平面\n2. 点击屏幕放置角色\n3. 双指缩放/旋转\n4. 点击拍照按钮拍照</string>
+    <!-- Permission Messages -->
+    <string name="camera_permission_required">Camera permission is required to use this app</string>
+    <string name="ar_not_supported">AR Core is not supported on this device</string>
+
+    <!-- AR Messages -->
+    <string name="plane_detected">Plane detected</string>
+    <string name="photo_saved">Photo saved successfully</string>
+    <string name="photo_save_failed">Failed to save photo</string>
+
+    <!-- Help Dialog -->
+    <string name="help_title">AR Camera Help</string>
+    <string name="help_text">
+        Welcome to AR Camera!\n\n
+        Instructions:\n
+        1. Move your device to detect surfaces\n
+        2. Tap on a detected surface to place stickers\n
+        3. Use the capture button to take photos\n
+        4. Apply filters using the filter menu\n
+        5. Add stickers from the sticker selector\n\n
+        Enjoy creating AR content!
+    </string>
+
+    <!-- App Name -->
+    <string name="app_name">AR Camera</string>
 </resources>

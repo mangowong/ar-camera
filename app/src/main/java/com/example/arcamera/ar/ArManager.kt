@@ -64,7 +64,6 @@ class ArManager(private val arFragment: ArFragment) {
     private fun loadCharacterModel(onComplete: (ModelRenderable?) -> Unit) {
         ModelRenderable.builder()
             .setSource(arFragment.requireContext(), Uri.parse(CHARACTER_MODEL_URL))
-            .setIsFilamentGltf(true)
             .build()
             .thenAccept { renderable ->
                 onComplete(renderable)
@@ -84,7 +83,6 @@ class ArManager(private val arFragment: ArFragment) {
 
         ModelRenderable.builder()
             .setSource(arFragment.requireContext(), stickerModelUri)
-            .setIsFilamentGltf(true)
             .build()
             .thenAccept { renderable ->
                 stickerNode.renderable = renderable
